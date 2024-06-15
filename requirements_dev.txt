@@ -1,0 +1,17 @@
+# This is the requirement for development environment 
+pymongo
+pymongo[srv]  # connect cloud mongodb 
+dnspython  # dns server 
+pandas
+numpy 
+ensure      # ensuring something
+
+-e . 
+
+# dev requirements - 
+pytest == 7.1.3
+tox==3.25.1     # create different env for testing 
+black==22.8.0  # linting tool 
+flake8==5.0.4   
+mypy==0.971
+    
