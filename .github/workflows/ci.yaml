@@ -1,5 +1,6 @@
 name: Python application
 
+# Event Triggers 
 on:
   push:
     branches: [ "main" ]
@@ -13,14 +14,14 @@ on:
 
 permissions:
   contents: read
-
+# list of Jobs 
 jobs:
   deploy:
     runs-on: ${{matrix.os}}
     strategy: 
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python-version: [3.8, 3.9, 3.10]
+        python-version: ["3.8", "3.9"]
 
     steps:
       - uses: actions/checkout@v4
